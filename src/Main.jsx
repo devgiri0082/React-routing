@@ -3,7 +3,7 @@ import { useLocation } from "react-router";
 import Header from "./Header";
 export default function Main(){ 
     let location = useLocation();
-    let [name, setName] = useState(location.state.name||"");
+    let [name, setName] = useState(location.state ? location.state.name:"");
     return (
         <>
         <Header name = {name}/>
